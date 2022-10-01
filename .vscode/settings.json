@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/0fe1ee77-18d0-4ea6-a00e-18bc71a35bd1/AppServices/subscriptions/0fe1ee77-18d0-4ea6-a00e-18bc71a35bd1/resourceGroups/Profaco_group/providers/Microsoft.Web/sites/Profaco",
+    "appService.deploySubpath": "dist"
+}
