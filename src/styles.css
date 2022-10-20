@@ -47,8 +47,10 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 1.6rem;
   line-height: 1.5rem;
-  background: url("https://www.pixel4k.com/wp-content/uploads/2018/03/Cyan%20Magenta%20Colors6960915234.jpg"); 
-}
+  background: rgb(141,146,164);
+  background: linear-gradient(90deg, rgba(141,146,164,1) 0%, rgba(35,100,136,1) 60%, rgba(178,232,247,1) 100%);
+  /* background: url("https://www.pixel4k.com/wp-content/uploads/2018/03/Cyan%20Magenta%20Colors6960915234.jpg"); */
+} 
 
 .contenedor {
   width: min(90%, 120rem);
@@ -710,3 +712,5 @@ template {
   text-align: center;
 }
 @import "app.css";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

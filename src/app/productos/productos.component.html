@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profaco, S.A.</title>
+
+    <!--Instalacion de CSS Bootstrap5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--Instalacion de JS Bootstrap5-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <div class="row">
+            
+
+
+             <!-- Modal para agregar nuevos datos datos-->
+            <div class="col-md-5">
+
+                <!-- bs5-card-head-foot, es una tarjeta de presentacion -->
+                <div class="card">
+                    <div class="card-header">
+                        Agregar producto
+                    </div>
+                    <div class="card-body">
+                        
+                        <!--aplicacion.Agregar(), nos permite invocar al metodo para recolectar los datos ingresados en el formulario e imprimirlos en consola-->
+                       <form [formGroup]="ingresarForm">             
+                        <div class="mb-3">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Producto</mat-label>
+                                <input matInput formControlName="producto">
+                              </mat-form-field>
+                        </div>
+                        <div class="mb-3">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Descripcion</mat-label>
+                                <input matInput formControlName="descripcion">
+                              </mat-form-field>
+                        </div>
+                        <div class="mb-3">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Cantidad</mat-label>
+                                <input matInput formControlName="cantidad">
+                              </mat-form-field>
+                        </div>
+                        <div class="mb-3">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Estado</mat-label>
+                                <mat-select matNativeControl formControlName="estado">
+                                  <mat-option>Activo</mat-option>
+                                  <mat-option>Inactivo</mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                        </div>
+                            <div class="mb-3">
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Precio</mat-label>
+                                    <input matInput formControlName="Precio">
+                                  </mat-form-field>
+                            </div>
+                            <button type="submit" class="btn btn-success">Aceptar</button>
+                            <input type="submit" class="btn btn-danger" value="Regresar" (click)="administracion()">
+                        </form>
+                    </div>   
+                </div>
+
+            </div>
+            <div class="col-md-7">
+                <!-- bs5-table-defaul, es para agregar tabla al formulario-->
+                <table class="table" style="color:white; font-size: 14px">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>PRODUCTO</th>
+                            <th>DESCRIPCION</th>
+                            <th>CANTIDAD</th>
+                            <th>ESTADO</th>
+                            <th>PRECIO</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tr *ngFor="let producto of productos">
+                        <td>{{ producto.codigo_producto }}</td>
+                        <td>{{producto.nombre_producto}}</td>
+                        <td>{{producto.descripcion_producto}}</td>
+                        <td>{{producto.cantidad}}</td>
+
+                        <td *ngIf="producto.estado_producto == 1">Activo</td>
+                        <td *ngIf="producto.estado_producto == 2">Inactivo</td>
+                        <td>{{producto.precio}}</td>
+                        <td><input type="submit" value="editar" (click)="modificar(producto)"></td>
+                    </tr>
+                    <tbody id="productos">
+                        
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+
+ 
+</body>
+</html>

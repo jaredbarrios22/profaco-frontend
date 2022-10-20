@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +10,286 @@
     <script src="https://kit.fontawesome.com/1085598771.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="build/img/logo.png">
     <title>ProfacoGT</title>
+    <style>
+        html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  h1, h2, h3 {
+    font-family: "PT Sans", sans-serif;
+    line-height: 1.2;
+  }
+  
+  h1 {
+    font-size: 4rem;
+  }
+  
+  h2 {
+    font-size: 3.6rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+  
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  .imgH {
+    height: 30rem;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5rem;
+    background: url("https://www.pixel4k.com/wp-content/uploads/2018/03/Cyan%20Magenta%20Colors6960915234.jpg"); 
+  }
+  
+  .contenedor {
+    width: min(90%, 120rem);
+    margin: 0 auto;
+  }
+  
+  .no-margin {
+    margin: 0;
+  }
+  
+  .centrar-texto {
+    text-align: center;
+    color: #fff;
+  }
+  
+  .section {
+    margin-top: 5rem;
+  }
+  
+  .buscar {
+    width: 5rem;
+  }
+  
+  .texto-bold {
+    font-weight: bold;
+    /*700*/
+  }
+  
+  .texto-normal {
+    font-weight: normal;
+    /*400*/
+  }
+  
+  .border-top {
+    border-top: 1rem solid #000;
+  }
+  
+ 
+  html {
+    line-height: 1.15;
+    /* 1 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
+  }
+  
+ 
+  body {
+    margin: 0;
+  }
+  
+  /**
+   * Render the `main` element consistently in IE.
+   */
+  main {
+    display: block;
+  }
+   
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+  
+ 
+  hr {
+    box-sizing: content-box;
+    /* 1 */
+    height: 0;
+    /* 1 */
+    overflow: visible;
+    /* 2 */
+  }
+  
+
+  pre {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+  }
+
+  a {
+    background-color: transparent;
+  }
+ 
+  abbr[title] {
+    border-bottom: none;
+    /* 1 */
+    text-decoration: underline;
+    /* 2 */
+    text-decoration: underline dotted;
+    /* 2 */
+  }
+  
+ 
+  b,
+  strong {
+    font-weight: bolder;
+  }
+
+  code,
+  kbd,
+  samp {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+  }
+  
+
+  small {
+    font-size: 80%;
+  }
+  
+
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  
+  sub {
+    bottom: -0.25em;
+  }
+  
+  sup {
+    top: -0.5em;
+  }
+  
+ 
+  img {
+    border-style: none;
+  }
+  
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit;
+    /* 1 */
+    font-size: 100%;
+    /* 1 */
+    line-height: 1.15;
+    /* 1 */
+    margin: 0;
+    /* 2 */
+  }
+  
+ 
+  button,
+  input {
+    /* 1 */
+    overflow: visible;
+  }
+  
+  
+  button,
+  select {
+    /* 1 */
+    text-transform: none;
+  }
+ 
+
+  progress {
+    vertical-align: baseline;
+  }
+  
+ 
+  textarea {
+    overflow: auto;
+  }
+  
+ 
+ 
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    /* 1 */
+    font: inherit;
+    /* 2 */
+  }
+  .producto__imagen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  .producto__imagen .border-descuento {
+    text-decoration: line-through;
+  }
+  .producto__imagen .font-descuento {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .producto__imagen .font-precio {
+    font-size: 2rem;
+  }
+  
+  .descripcion-producto .descripcion-manga {
+    line-height: 1.5;
+  }
+  
+  .producto-badge p span {
+    padding: 1rem 2rem;
+    background-color: #e96901;
+    border-radius: 1rem;
+    color: #fff;
+  }
+  
+  .producto-precio {
+    margin-top: 2rem;
+  }
+  .producto-precio .producto-existencia {
+    padding: 1rem 2rem;
+    background-color: #088c00;
+    border-radius: 1rem;
+    color: #fff;
+  }
+  
+  .producto-detalle ul li {
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+ 
+
+    </style>
 </head>
 <body>
    
@@ -21,194 +299,31 @@
                 <h1 class="logo-texto centrar-texto texto-normal no-margin">Profaco<span class="texto-bold">GT</span></h1>
             </a>
             <nav>
-                <ul class="menu">
-                    <li><a href="" class="link">Catalogo</a></li>
-                    <li><a href="#" class="link">Ofertas</a></li>
+                <ul class="menu" style="font-size: 22px;">
+                    <li><a class="link"  (click)="catalogo()">Catalogo</a></li>
+                    <li><a href="#" class="link">Contacto</a></li>
                     
                 </ul>
             </nav>
-            <form action="catalogo.html" method="POST" class="form">
+            <!-- <form action="catalogo.html" method="POST" class="form">
                 <input type="text" name="buscar" aria-label="Buscar" placeholder="¿Qué Buscas?">
-                <button type="submit" aria-label="Buscar"><i class="fas fa-search"></i></button>
-                <!-- <button type="" value="Buscar" class="btn buscar"> -->
-            </form>
+              
+            
+            </form> -->
         </div>
         <div class="header__texto centrar-texto">
-            <h2 class="no-margin">Lo que necesites en medicina un mismo lugar</h2>
-            <p class="no-margin">Todo en nuestra tienda online</p>
+            <h2 class="no-margin">Laboratorio Profaco S.A.</h2>
+            <p class="no-margin">Laboratorio farmacéutico en Zona 3 de Mixco <br> Lomas de Cotio, 15 Avenida 9-46, Guatemala</p>
         </div>
     </header>
     <div class="contenedor">
-        <h2 class="centrar-texto ">Ultimos Ingresados</h2>
+        <!-- <h2 class="centrar-texto ">Catálogo de productos</h2> -->
         <main class="contenido-grid section">
-            <div class="producto">
-                <div class="producto__imagen">
-                    <a href="#">
-                        <picture>
-                           
-                            <img loading="lazy" width="200" height="300" src="build/img/prudence.png" alt="Condones prudence">
-                        </picture>
-                    </a>
-                    <h3 class="no-margin">PRUDENCE</h3>
-                    <p>SABOR AROMA MIX X 10 </p>
-                    <p class="no-margin">Q43.40 caja</p>
-                </div>
-            </div><!-- /producto -->
-            <div class="producto">
-                <div class="producto__imagen">
-                    <a href="#">
-                        <picture>
-                            
-                            <img loading="lazy" width="200" height="300" src="build/img/panadol.png" alt="Panadol">
-                        </picture>
-                    </a>
-                    <h3 class="no-margin">Panadol Noches</h3>
-                    <p>NOCHE X 16 TABLETAS </p>
-                    <p class="no-margin">Q25.00 caja</p>
-                </div>
-            </div><!-- /producto -->
-            <div class="producto">
-                <div class="producto__imagen">
-                    <a href="#">
-                        <picture>
-                            
-                            <img loading="lazy" width="200" height="300" src="build/img/nestum.png" alt="Nestum">
-                        </picture>
-                    </a>
-                    <h3 class="no-margin">NESTUM TRIGO</h3>
-                    <p>LECHE 250 GRAMOS</p>
-                    <p class="no-margin">Q28.40 unidad</p>
-                </div>
-            </div><!-- /producto -->
-            <div class="producto">
-                <div class="producto__imagen">
-                    <a href="#">
-                        <picture>
-                            
-                            <img loading="lazy" width="200" height="300" src="build/img/talco.png" alt="Talco Noche">
-                        </picture>
-                    </a>
-                    <h3 class="no-margin">TALCO JOHNSON</h3>
-                    <p>ANTES DE DORMIR 200 GR</p>
-                    <p class="no-margin">Q51.80 unidad</p>
-                </div>
-            </div><!-- /producto -->
-            <div class="producto">
-                <div class="producto__imagen">
-                    <a href="#">
-                        <picture>
-                            
-                            <img loading="lazy" width="200" height="300" src="build/img/calcio.png" alt="Calcio">
-                        </picture>
-                    </a>
-                    <h3 class="no-margin">CALCIOLAN 600</h3>
-                    <p>MAS D3 * 100 TAB - CAJA</p>
-                    <p class="no-margin">Q249.35 caja</p>
-                </div>
-            </div><!-- /producto -->
-            <div class="producto">
-                <div class="producto__imagen">
-                    <a href="#">
-                        <picture>
-                        
-                            <img loading="lazy" width="200" height="300" src="build/img/acetaminofen.png" alt="Acetaminofen">
-                        </picture>
-                    </a>
-                    <h3 class="no-margin">ACETAMINOFEN </h3>
-                    <p>JARABE 120 ML</p>
-                    <p class="no-margin">Q28.00 unidad</p>
-                </div>
-            </div><!-- /producto -->
-            <div class="producto">
-                <div class="producto__imagen">
-                    <a href="#">
-                        <picture>
-                            
-                            <img loading="lazy" width="200" height="300" src="build/img/postinor.png" alt="postinor">
-                        </picture>
-                    </a>
-                    <h3 class="no-margin">POSTINOR</h3>
-                    <p>1.5 MG * 1 TAB</p>
-                    <p class="no-margin">Q175.71 unidad</p>
-                </div>
-            </div><!-- /producto -->
-            <div class="producto">
-                <div class="producto__imagen">
-                    <a href="#">
-                        <picture>
-                         
-                            <img loading="lazy" width="200" height="300" src="build/img/ibuprofeno.png" alt="IBUPROFENO BELSA ">
-                        </picture>
-                    </a>
-                    <h3 class="no-margin">IBUPROFENO </h3>
-                    <p>BELSA 600MG X GELCAP</p>
-                    <p class="no-margin">Q4.00 unidad</p>
-                </div>
-            </div><!-- /producto -->
+    
+
+<!-- /producto -->
         </main>
-        <h2 class="centrar-texto">Ofertas</h2>
-        <section class="section contenido-grid">
-            <div class="producto">
-                <div class="producto__imagen">
-                    <a href="#">
-                        <picture>
-                            
-                            <img loading="lazy" width="200" height="300" src="build/img/sukrolñ.png" alt="SUKROL VIGOR">
-                        </picture>
-                    </a>
-                    <h3 class="no-margin">SUKROL VIGOR</h3>
-                    <p>HOMBRE*30 TAB</p>
-                    <p class="no-margin border-descuento font-descuento">Q60.50 caja</p>
-                    <p class="no-margin font-precio">Q57.75 caja</p>
-                </div>
-            </div><!-- /producto -->
-            <div class="producto">
-                <!-- <picture>
-                    <source loading="lazy" srcset="build/img/onepunch1.webp" type="image/webp">
-                    <img loading="lazy" src="img/blog1.jpg" alt="Imagen Blog">
-                </picture> -->
-                <div class="producto__imagen">
-                    <a href="#">
-                        <picture>
-                            
-                            <img loading="lazy" width="200" height="300" src="build/img/vitalFuerte.png" alt="VITAL FUERTE ">
-                        </picture>
-                    </a>
-                    <h3 class="no-margin">VITAL FUERTE </h3>
-                    <p> 100 MAS 30</p>
-                    <p class="no-margin border-descuento font-descuento">Q120.00 unidad</p>
-                    <p class="no-margin font-precio">Q109.00 unidad</p>
-                </div>
-            </div><!-- /producto -->
-            <div class="producto">
-                <div class="producto__imagen">
-                    <a href="#">
-                        <picture>
-                            
-                            <img loading="lazy" width="200" height="300" src="build/img/centrum.png" alt="CENTRUM VITAMINAS Y MINERALES">
-                        </picture>
-                    </a>
-                    <h3 class="no-margin">CENTRUM VITAMINAS</h3>
-                    <p>Y MINERALES * 60 TAB</p>
-                    <p class="no-margin border-descuento font-descuento">Q3015.25 caja</p>
-                    <p class="no-margin font-precio">Q299.25 caja</p>
-                </div>
-            </div><!-- /producto -->
-            <div class="producto">
-                <div class="producto__imagen">
-                    <a href="#">
-                        <picture>
-                            
-                            <img loading="lazy" width="200" height="300" src="build/img/vitaminac.png" alt="VITAMINA C FORAL">
-                        </picture>
-                    </a>
-                    <h3 class="no-margin">VITAMINA C FORAL</h3>
-                    <p>30 CAPSULAS</p>
-                    <p class="no-margin border-descuento font-descuento">Q62.85 caja</p>
-                    <p class="no-margin font-precio">Q59.30</p>
-                </div>
-            </div><!-- /producto -->
-        </section>    
+          
     </div>
     <footer class="footer section">
         <div class="contenedor">
@@ -218,8 +333,7 @@
                 </a>
                 <nav>
                     <ul class="menu">
-                        <li><a class="link">Catalogo</a></li>
-                        <li><a class="link">Ofertas</a></li>
+                        <li><a class="link" (click)="catalogo()">Catalogo</a></li>
                         <li><a class="link" (click)="login()">Cuenta</a></li>
                     </ul>
                 </nav>
@@ -228,4 +342,3 @@
     </footer>
     <script src="build/js/modernizr.js"></script>
 </body>
-</html>

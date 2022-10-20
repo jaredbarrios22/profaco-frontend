@@ -1,0 +1,114 @@
+@import url(https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css);
+body{
+	font-family: arial, helvetica;
+	background: #e8e8e8;
+    font-size: medium;
+}
+
+.menu{
+	list-style: none;
+	padding: 10px;
+	margin-top: 10px;
+	
+	width: 100%;
+	max-width: 250px;
+	margin-left: 90%;
+	
+}
+
+.menu li a{
+	text-decoration: none;
+	color: white;
+	padding: 30px;
+	display: block;
+}
+
+.menu li{
+	display: inline-block;
+	text-align: center;
+}
+
+.menu li a:hover{
+	background: #ef8354;
+}
+
+
+
+body{
+	font-family: arial, helvetica;
+	background: #e8e8e8;
+}
+
+.submenu{
+    margin-top: 125px;
+	list-style: none;
+	padding: 0;
+	background: #09232700;
+	width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+
+.submenu li a{
+	text-decoration: none;
+	color: white;
+	padding: 30px;
+	display: block;
+}
+
+.submenu li{
+	display: inline-block;
+	text-align: center;
+}
+
+.submenu li a:hover{
+	background: #ef8354;
+}
+
+
+/* table{
+
+} */
+
+caption{
+    padding-top: 20px;
+    font-style: arial;
+}
+
+/* th{
+    background-color: black;
+    color: white;
+}
+
+td, th{
+    border: 2px solid black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+} */
+
+table {
+
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    border-collapse:separate;
+    border:solid black 1px;
+    border-radius:6px;
+}
+
+td, th {
+    border-left:solid black 1px;
+    /* border-top:solid black 1px; */
+}
+
+
+td:first-child, th:first-child {
+     border-left: none;
+}
+

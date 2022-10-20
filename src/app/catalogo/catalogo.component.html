@@ -1,0 +1,55 @@
+<header class="banner bannner-principal">
+    <div class="barra">
+        <a href="index.html" class="logo">
+            <h1 class="logo-texto centrar-texto texto-normal no-margin">Profaco<span class="texto-bold">GT</span></h1>
+        </a>
+        <nav>
+            <ul class="menu" style="font-size: 22px;">
+                <li><a class="link"  (click)="regresar()">Página principal</a></li>
+                <li><a href="#" class="link">Contacto</a></li>
+                
+            </ul>
+        </nav>
+
+    </div>
+    <!-- <div class="header__texto centrar-texto">
+        <h2 class="no-margin">Laboratorio Profaco S.A.</h2>
+        <p class="no-margin">Laboratorio farmacéutico en Zona 3 de Mixco <br> Lomas de Cotio, 15 Avenida 9-46, Guatemala</p>
+    </div> -->
+
+
+</header>
+
+<main>
+
+  
+    <!-- inicio muestra productos -->
+    <div *ngFor="let inventario of medicina"  class="producto">
+        <div *ngIf="inventario.estado_producto == 1" class="producto__imagen">
+                <picture>
+                    <img loading="lazy" width="200" height="200" src="assets/img/{{inventario.imagen}}" alt="img">
+                </picture>
+           
+            <h3 class="no-margin">{{inventario.nombre_producto}}</h3>
+            <p>{{inventario.descripcion_producto}}</p>
+            <p class="no-margin">Precio: Q. {{inventario.precio}}</p>
+        </div>
+    </div>
+    <!-- fin muestra productos -->
+
+</main>
+<footer class="footer section">
+    <div class="contenedor">
+        <div class="barra">
+            <a href="index.html">
+                <h1 class="centrar-texto logo__nombre">Profaco<span class="logo__bold">GT</span></h1>
+            </a>
+            <nav>
+                <ul class="menu">
+                    <li><a class="link" (click)="regresar()">Página principal</a></li>
+                   
+                </ul>
+            </nav>
+        </div>
+    </div>
+</footer>

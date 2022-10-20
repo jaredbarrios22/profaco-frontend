@@ -5,6 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profaco, S.A.</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html,body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    /*background: #f2f2f2;*/
+    width: 100%;
+    background: url("https://www.pixel4k.com/wp-content/uploads/2018/03/Cyan%20Magenta%20Colors6960915234.jpg"); 
+}
+.wrapper{
+    overflow: hidden;
+    max-width: 390px;
+    background-color: #fff ;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 15px 20px rgba(0, 0,0,0.1);
+}
+.wrapper .tittle-text{
+    display: flex;
+    width: 200%;
+}
+.wrapper .tittle-text .tittle{
+    width: 50%;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265,1.55);
+}
+.wrapper .form-container{
+    width: 100%;
+    overflow: hidden;
+}
+    </style>
 </head>
 <body>
     <div class="wrapper">
@@ -14,13 +53,13 @@
         </div>
         
         <div class="form-container">
-            <div class="slide-controls">
+            <!-- <div class="slide-controls">
                 <input type="radio" name="slider" id="login" checked>
                 <input type="radio" name="slider" id="signup" >
                 <label for="login" class="slide login">Login</label>
                 <label for="signup" class="slide signup">Registro</label>
                 <div class="slide-tab"></div>
-            </div>
+            </div> -->
 
             <div class="form-inner">
                 <form action="" class="login">
@@ -32,7 +71,7 @@
                     </div>
                     <div class="pass-link"><a href="#" ></a></div>
                     <div class="field">
-                        <input type="submit" value="Login">
+                        <input type="submit" value="LogiAn"  (click)="administracion()">
                     </div>
                     <div class="signup-link"> <a href="#"></a></div>
                 </form>

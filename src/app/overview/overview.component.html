@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Profaco</title>
+	
+	</head>
+	<body>
+		<div id="header">
+			<ul class="menu">
+				<li><input type="button" class="btn btn-info" value="Empleados">
+				</li>
+				<li><input type="submit" class="btn btn-danger" value="Salir" (click)="regresar()">
+				</li>
+			</ul>
+		</div>
+		<div id="header">
+			<ul class="submenu">
+				<li><input type="submit" value="Productos" class="btn btn-secondary" style="font-size: 20px;" (click)="productosModificar()">
+				</li>
+				<li><input type="submit" value="ventas" class="btn btn-secondary" style="font-size: 20px;"(click)="ventasReporte()">
+				</li>
+			</ul>
+		</div>
+		
+		<table>
+			
+			<tr>
+				<td>No. Pedido</td>
+				<td>Estado</td>
+				<td>Fecha Pedido</td>
+				<td>Nombre</td>
+				<td>Telefono</td>
+				<td>Email</td>
+				<td>Direccion</td>
+				<td>Departamento</td>
+				<td>Municipio</td>
+				<td>Zona</td>
+			</tr>
+			<tbody *ngFor="let pedido of pedidos">
+						<tr *ngIf="pedido.estado_pedido != 'terminado'">
+								<td>{{ pedido.no_pedido }}</td>
+								<td>{{pedido.estado_pedido}}</td>
+								<td>{{pedido.fecha_pedido | date: 'dd/MM/YYYY' }}</td>
+								<td>{{pedido.nombre_cliente}} {{pedido.apellido_cliente}}</td>
+								<td>{{pedido.telefono}}</td>
+								<td>{{pedido.email}}</td>
+								<td>{{pedido.direccion}}</td>
+								<td>{{pedido.departamento}}</td>
+								<td>
+									<div *ngFor="let mun of municipioslista"><div *ngIf="pedido.municipio == mun.codigo_municipio">
+										{{mun.nombre_municipio}}
+
+									</div></div>
+									</td>
+								<td>{{pedido.zona}}</td>
+								<td><input type="submit" value="Consultar" (click)="abrirDetalles(pedido)"></td>
+						</tr>
+			</tbody>
+		</table>
+	</body>
+	<div *ngIf="estado == true">
+		<app-detalles-pedido></app-detalles-pedido>
+	</div>
+
+</html>
+
+

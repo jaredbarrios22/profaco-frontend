@@ -1,0 +1,72 @@
+.header-producto .barra {
+    background-color: #000;
+    padding: 2rem;
+  }
+  .header-producto .barra .logo__texto {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  .header-producto .barra .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    height: 100%;
+  }
+  .header-producto .barra .menu .link {
+    margin-right: 2rem;
+  }
+  .header-producto .barra .form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    border-radius: 0.2rem;
+    background-color: #fff;
+    width: 100%;
+    height: 3rem;
+  }
+  .header-producto .barra .form input {
+    border-radius: 1rem;
+    width: 100%;
+    border: none;
+  }
+  .header-producto .barra .form input:focus-visible {
+    outline: none;
+  }
+  .header-producto .barra .form .btn-secundario {
+    border: none;
+    background-color: #fff;
+  }
+  @media (min-width: 768px) {
+    .header-producto .barra {
+      display: flex;
+      justify-content: space-around;
+    }
+    .header-producto .barra .logo {
+      padding: 1rem;
+    }
+  }
+  .contenido-principal .producto {
+    transition: all 0.5s ease-in-out;
+  }
+  .contenido-principal .producto:hover {
+    transform: scale(1.1);
+  }
+  
+  .contenido-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+  }
+  .contenido-grid .producto {
+    transition: all 0.5s ease-in-out;
+  }
+  .contenido-grid .producto:hover {
+    transform: scale(1.1);
+  }
+  
+  .header-producto .logo-texto {
+    margin-bottom: 1rem;
+  }
+  

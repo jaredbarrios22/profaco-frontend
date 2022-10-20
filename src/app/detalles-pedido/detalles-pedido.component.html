@@ -1,0 +1,100 @@
+<body>
+    <div class="container">
+        <br>
+        <div class="row">
+            
+            <!-- Modal para actualizar datos-->
+            <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        
+                    </div>
+                </div>
+            </div>
+
+             <!-- Modal para agregar nuevos datos datos-->
+            <div class="col-md-5">
+
+                <!-- bs5-card-head-foot, es una tarjeta de presentacion -->
+                <div class="card">
+                    <div class="card-header">
+                        Productos
+                    </div>
+                    <div class="card-body">
+                        
+                        <form [formGroup]="ingresoForm">
+                          
+                            <h2>Detalles pedido {{data.no_pedido}} </h2>
+                            <h3>Fecha realizacion {{data.fecha_pedido | date: 'dd/MM/YYYY' }}</h3>
+                                
+
+
+                                  <mat-form-field appearance="fill">
+                                    <mat-label>Estado</mat-label>
+                                    <mat-select matNativeControl formControlName="estado">
+                                      <mat-option  *ngFor="let estado of estados" value={{estado.descripcion}}>{{estado.descripcion}}</mat-option>
+                                    </mat-select>
+                                  </mat-form-field>
+
+                                 
+                                  <!-- <mat-form-field appearance="fill">
+                                    <mat-label>fecha</mat-label>
+                                    <input matInput formControlName="fecha">
+                                  </mat-form-field> -->
+
+                                  <mat-form-field appearance="fill">
+                                    <mat-label>Nombre</mat-label>
+                                    <input matInput formControlName="nombre">
+                                  </mat-form-field>
+
+                                  <mat-form-field appearance="fill">
+                                    <mat-label>Telefono</mat-label>
+                                    <input matInput formControlName="telefono">
+                                  </mat-form-field>
+
+                                  <mat-form-field appearance="fill">
+                                    <mat-label>correo</mat-label>
+                                    <input matInput formControlName="correo">
+                                  </mat-form-field>
+                                 
+                                  <mat-form-field appearance="fill">
+                                    <mat-label>Direccion</mat-label>
+                                    <input matInput formControlName="direccion">
+                                  </mat-form-field>
+                                
+                                  <mat-form-field appearance="fill">
+                                    <mat-label>Departamento</mat-label>
+                                    <input matInput formControlName="departamento">
+                                  </mat-form-field>
+
+                                 
+                          </form> <input type="submit" class="btn btn-success" (click)="confirmarPedido(data.no_pedido)" value="Confirmar">
+                          <input type="submit" class="btn btn-danger" (click)="cerrardetalles()" value="cerrar" style="align-self: right;">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-7">
+                <!-- bs5-table-defaul, es para agregar tabla al formulario-->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>PRODUCTO</th>
+                            <th>CANTIDAD</th>
+                        </tr>
+            
+                    </thead>
+                    <tbody id="productos">
+                        <tr *ngFor="let contenido of contenidopedido" >
+
+                          <td *ngIf="contenido.no_pedido == data.no_pedido"><div *ngFor="let producto of productos"><div *ngIf="contenido.producto == producto.codigo_producto">{{producto.nombre_producto}}</div></div></td>
+                          <td *ngIf="contenido.no_pedido == data.no_pedido">{{contenido.cantidad}}</td>
+                       
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+</body>

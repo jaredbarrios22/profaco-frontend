@@ -1,0 +1,37 @@
+<form [formGroup]="editarForm">
+                          
+    <h2>Editar ID. {{data.codigo_producto}} </h2>
+   
+      
+    <mat-form-field appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="producto">
+      </mat-form-field>  
+<br>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Descripcion</mat-label>
+        <input matInput formControlName="descripcion">
+      </mat-form-field>
+<br>
+      <mat-form-field appearance="fill">
+        <mat-label>Cantidad</mat-label>
+        <input matInput formControlName="cantidad">
+      </mat-form-field>
+<br>
+          <mat-form-field appearance="fill">
+            <mat-label>Estado</mat-label>
+            <mat-select matNativeControl formControlName="estadoP">
+             <mat-option  *ngFor="let estado of estadosP" value={{estado.codigo_estado}}>{{estado.descripcion}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+<br>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Precio</mat-label>
+            <input matInput formControlName="precio">
+          </mat-form-field>
+         
+
+         
+  </form> <input type="submit" class="btn btn-danger" (click)="cerraredicion()" value="cerrar">
