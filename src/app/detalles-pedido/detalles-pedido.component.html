@@ -28,47 +28,48 @@
                             <h3>Fecha realizacion {{data.fecha_pedido | date: 'dd/MM/YYYY' }}</h3>
                                 
 
-
-                                  <mat-form-field appearance="fill">
+                                  <h3 style="font-color: red;">Estado: {{data.estado_pedido}}</h3>
+                                  <!-- <mat-form-field appearance="fill">
                                     <mat-label>Estado</mat-label>
                                     <mat-select matNativeControl formControlName="estado">
                                       <mat-option  *ngFor="let estado of estados" value={{estado.descripcion}}>{{estado.descripcion}}</mat-option>
                                     </mat-select>
-                                  </mat-form-field>
+                                  </mat-form-field> -->
 
                                  
                                   <!-- <mat-form-field appearance="fill">
                                     <mat-label>fecha</mat-label>
                                     <input matInput formControlName="fecha">
                                   </mat-form-field> -->
-
-                                  <mat-form-field appearance="fill">
+                                  <h3>Nombre: {{data.nombre}}</h3>
+                                  <!-- <mat-form-field appearance="fill">
                                     <mat-label>Nombre</mat-label>
                                     <input matInput formControlName="nombre">
-                                  </mat-form-field>
-
-                                  <mat-form-field appearance="fill">
+                                  </mat-form-field> -->
+                                  <h3>Telefono: {{data.telefono}}</h3>
+                                  <!-- <mat-form-field appearance="fill">
                                     <mat-label>Telefono</mat-label>
                                     <input matInput formControlName="telefono">
-                                  </mat-form-field>
-
-                                  <mat-form-field appearance="fill">
+                                  </mat-form-field> -->
+                                  <h3>correo: {{data.email}}</h3>
+                                  <!-- <mat-form-field appearance="fill">
                                     <mat-label>correo</mat-label>
                                     <input matInput formControlName="correo">
-                                  </mat-form-field>
-                                 
-                                  <mat-form-field appearance="fill">
+                                  </mat-form-field> -->
+                                 <h3>Direccion: {{data.direccion}}</h3>
+                                  <!-- <mat-form-field appearance="fill">
                                     <mat-label>Direccion</mat-label>
                                     <input matInput formControlName="direccion">
                                   </mat-form-field>
-                                
-                                  <mat-form-field appearance="fill">
+                                 --> <h3>Departamento: {{data.departamento}}</h3>
+                                  <!-- <mat-form-field appearance="fill">
                                     <mat-label>Departamento</mat-label>
                                     <input matInput formControlName="departamento">
-                                  </mat-form-field>
+                                  </mat-form-field> -->
 
                                  
-                          </form> <input type="submit" class="btn btn-success" (click)="confirmarPedido(data.no_pedido)" value="Confirmar">
+                          </form> <input type="submit" class="btn btn-success" (click)="confirmarPedido()" value="Confirmar">
+                          
                           <input type="submit" class="btn btn-danger" (click)="cerrardetalles()" value="cerrar" style="align-self: right;">
                     </div>
                 </div>
@@ -93,8 +94,9 @@
                         </tr>
                     </tbody>
                 </table>
-                
+                <input type="submit" class="btn btn-secondary" (click)="terminarPedido()" value="Terminar">
             </div>
         </div>
     </div>
+  
 </body>

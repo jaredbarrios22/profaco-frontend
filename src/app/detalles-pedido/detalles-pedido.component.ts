@@ -60,13 +60,13 @@ export class DetallesPedidoComponent implements OnInit {
     this.contenido();
     this.reporteProducto();
     // this.ingresoForm.controls['no_pedido'].setValue(this.data.no_pedido);
-    this.ingresoForm.controls['estado'].setValue(this.data.estado_pedido);
-    this.ingresoForm.controls['fecha'].setValue(moment(this.data.fecha_pedido).format('DD/MM/YYYY'));
-    this.ingresoForm.controls['nombre'].setValue(this.data.nombre_cliente);
-    this.ingresoForm.controls['telefono'].setValue(this.data.telefono);
-    this.ingresoForm.controls['correo'].setValue(this.data.email);
-    this.ingresoForm.controls['direccion'].setValue(this.data.direccion);
-    this.ingresoForm.controls['departamento'].setValue(this.data.departamento);
+    // this.ingresoForm.controls['estado'].setValue(this.data.estado_pedido);
+    // this.ingresoForm.controls['fecha'].setValue(moment(this.data.fecha_pedido).format('DD/MM/YYYY'));
+    // this.ingresoForm.controls['nombre'].setValue(this.data.nombre_cliente);
+    // this.ingresoForm.controls['telefono'].setValue(this.data.telefono);
+    // this.ingresoForm.controls['correo'].setValue(this.data.email);
+    // this.ingresoForm.controls['direccion'].setValue(this.data.direccion);
+    // this.ingresoForm.controls['departamento'].setValue(this.data.departamento);
   }
 
   async contenido(){
@@ -80,7 +80,24 @@ export class DetallesPedidoComponent implements OnInit {
     console.log(this.productos);
   }
 
-  confirmarPedido(data: any){
+  confirmarPedido(){
+    const actualizacionpedido = {
+      
+        "no_pedido": this.data.no_pedido,
+        "estado_pedido": "confirmado",
+        "fecha_pedido": this.data.fecha_pedido,
+        "nombre_cliente": this.data.nombre_cliente,
+        "apellido_cliente": this.data.apellido_cliente,
+        "telefono": this.data.telefono,
+        "email": this.data.email,
+        "direccion": this.data.direccion,
+        "municipio": this.data.municipio,
+        "zona": this.data.zona,
+        "departamento": this.data.departamento
+    
+    }
+
+    console.log(actualizacionpedido);
     swal.fire({
       title: '¿Desea confirmar los cambios?',
       showDenyButton: true,
@@ -94,12 +111,50 @@ export class DetallesPedidoComponent implements OnInit {
     }).then((result) => {
       if (result.isConfirmed) {
         //confirmar cambios
-        
+        let a = this.pedidos.registrarPedido(actualizacionpedido).toPromise();
+        console.log(a);
         swal.fire('Cambios confirmados', '', 'success')
       }
     })
   }
 
+  terminarPedido(){
+    const actualizacionpedido = {
+      
+        "no_pedido": this.data.no_pedido,
+        "estado_pedido": "Terminado",
+        "fecha_pedido": this.data.fecha_pedido,
+        "nombre_cliente": this.data.nombre_cliente,
+        "apellido_cliente": this.data.apellido_cliente,
+        "telefono": this.data.telefono,
+        "email": this.data.email,
+        "direccion": this.data.direccion,
+        "municipio": this.data.municipio,
+        "zona": this.data.zona,
+        "departamento": this.data.departamento
+    
+    }
+
+    console.log(actualizacionpedido);
+    swal.fire({
+      title: '¿Desea confirmar los cambios?',
+      showDenyButton: true,
+      confirmButtonText: 'Si',
+      denyButtonText: 'No',
+      customClass: {
+        actions: 'my-actions',
+        confirmButton: 'order-1',
+        denyButton: 'order-2',
+      }
+    }).then((result) => {
+      if (result.isConfirmed) {
+        //confirmar cambios
+        let a = this.pedidos.registrarPedido(actualizacionpedido).toPromise();
+        console.log(a);
+        swal.fire('Cambios confirmados', '', 'success')
+      }
+    })
+  }
 
   cerrardetalles(){
     const dialogRef = this.dialog.closeAll();
