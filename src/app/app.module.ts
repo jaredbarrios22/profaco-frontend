@@ -22,7 +22,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { EditarProductoComponent } from './editar-producto/editar-producto.component';
-
+import { EmpleadosComponent } from './empleados/empleados.component';
+import { RegistrarempleadoComponent } from './registrarempleado/registrarempleado.component';
+import { ContactoComponent } from './contacto/contacto.component';
+import { InformacionComponent } from './informacion/informacion.component';
+import {MatIconModule} from '@angular/material/icon';
 
   const routes: Routes = [
     {   
@@ -45,6 +49,18 @@ import { EditarProductoComponent } from './editar-producto/editar-producto.compo
     },
     {
       path: 'catalogo', component: CatalogoComponent
+    },
+    {
+      path: 'empleados', component: EmpleadosComponent
+    },
+    {
+      path: 'registrarempleado', component: RegistrarempleadoComponent
+    },
+    {
+      path: 'contacto', component: ContactoComponent
+    },
+    {
+      path: 'informacion', component: InformacionComponent
     }
   ];
 @NgModule({
@@ -58,6 +74,10 @@ import { EditarProductoComponent } from './editar-producto/editar-producto.compo
     DetallesVentaComponent,
     CatalogoComponent,
     EditarProductoComponent,
+    EmpleadosComponent,
+    RegistrarempleadoComponent,
+    ContactoComponent,
+    InformacionComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,7 +91,8 @@ import { EditarProductoComponent } from './editar-producto/editar-producto.compo
     MatSelectModule,
     FormsModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    MatIconModule,
 
   ],
   providers: [

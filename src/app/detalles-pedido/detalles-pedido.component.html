@@ -28,7 +28,7 @@
                             <h3>Fecha realizacion {{data.fecha_pedido | date: 'dd/MM/YYYY' }}</h3>
                                 
 
-                                  <h3 style="font-color: red;">Estado: {{data.estado_pedido}}</h3>
+                                  <h3 style=>Estado: {{data.estado_pedido}}</h3>
                                   <!-- <mat-form-field appearance="fill">
                                     <mat-label>Estado</mat-label>
                                     <mat-select matNativeControl formControlName="estado">
@@ -68,7 +68,7 @@
                                   </mat-form-field> -->
 
                                  
-                          </form> <input type="submit" class="btn btn-success" (click)="confirmarPedido()" value="Confirmar">
+                          </form>  <input type="submit" class="btn btn-success" (click)="confirmarPedido()" value="Confirmar">
                           
                           <input type="submit" class="btn btn-danger" (click)="cerrardetalles()" value="cerrar" style="align-self: right;">
                     </div>
@@ -94,7 +94,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <input type="submit" class="btn btn-secondary" (click)="terminarPedido()" value="Terminar">
+                 <input type="submit" class="btn btn-secondary" (click)="terminarPedido()" value="Terminar">
             </div>
         </div>
     </div>

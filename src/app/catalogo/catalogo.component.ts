@@ -22,6 +22,9 @@ export class CatalogoComponent implements OnInit {
     
   }
 
+  contacto(){
+    this.router.navigate(['contacto'])  
+  }
   async reporteProducto(){
     this.medicina = await this.calls.reporteProductos().toPromise(); 
   

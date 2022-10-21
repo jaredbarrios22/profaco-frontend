@@ -52,8 +52,8 @@
                             <mat-form-field appearance="fill">
                                 <mat-label>Estado</mat-label>
                                 <mat-select matNativeControl formControlName="estado">
-                                  <mat-option>Activo</mat-option>
-                                  <mat-option>Inactivo</mat-option>
+                                  <mat-option value="1">Activo</mat-option>
+                                  <mat-option value="2">Inactivo</mat-option>
                                 </mat-select>
                               </mat-form-field>
                         </div>
@@ -63,7 +63,7 @@
                                     <input matInput formControlName="precio">
                                   </mat-form-field>
                             </div>
-                            <button type="submit" class="btn btn-success">Aceptar</button>
+                            <button type="submit" class="btn btn-success" (click)="ingresarprod()">Aceptar</button>
                             <input type="submit" class="btn btn-danger" value="Regresar" (click)="administracion()">
                         </form>
                     </div>   

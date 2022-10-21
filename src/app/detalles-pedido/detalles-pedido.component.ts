@@ -8,6 +8,7 @@ import * as moment from 'moment';
 import { Router } from '@angular/router';
 import { AnonymousSubject } from 'rxjs/internal/Subject';
 import swal from 'sweetalert2';
+import { OverviewComponent } from '../overview/overview.component';
 
 
 
@@ -24,10 +25,14 @@ export class DetallesPedidoComponent implements OnInit {
   estados = null; 
   ingresoForm:FormGroup;
   pedido = null;
+  a: any;
+  total = 0;
+  precioP: any;
   
   constructor(
     public dialogRef: MatDialogRef<any>,
     @Inject (MAT_DIALOG_DATA) public data: any,
+    @Inject (MAT_DIALOG_DATA) public desde: number,
     private pedidos: calls,
     private router: Router,
     private dialog:MatDialog
@@ -55,10 +60,11 @@ export class DetallesPedidoComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     this.estados = await this.pedidos.estadoPedido().toPromise(); 
     console.log(this.estados);
-    console.log(this.data);
+    console.log(this.desde);
     this.pedido = this.data;
     this.contenido();
     this.reporteProducto();
+
     // this.ingresoForm.controls['no_pedido'].setValue(this.data.no_pedido);
     // this.ingresoForm.controls['estado'].setValue(this.data.estado_pedido);
     // this.ingresoForm.controls['fecha'].setValue(moment(this.data.fecha_pedido).format('DD/MM/YYYY'));
@@ -118,11 +124,11 @@ export class DetallesPedidoComponent implements OnInit {
     })
   }
 
-  terminarPedido(){
+  async terminarPedido(){
     const actualizacionpedido = {
       
         "no_pedido": this.data.no_pedido,
-        "estado_pedido": "Terminado",
+        "estado_pedido": "terminado",
         "fecha_pedido": this.data.fecha_pedido,
         "nombre_cliente": this.data.nombre_cliente,
         "apellido_cliente": this.data.apellido_cliente,
@@ -149,14 +155,57 @@ export class DetallesPedidoComponent implements OnInit {
     }).then((result) => {
       if (result.isConfirmed) {
         //confirmar cambios
+        this.registrarventa();
         let a = this.pedidos.registrarPedido(actualizacionpedido).toPromise();
         console.log(a);
+        
         swal.fire('Cambios confirmados', '', 'success')
       }
     })
+ 
+
   }
+
+
+async registrarventa(){
+   //registrar venta
+
+  
+   //this.contenido();
+   //let precioP = await this.pedidos.reporteProductos().toPromise();
+   console.log(this.productos);
+   console.log(this.contenidopedido);
+   for (let index = 0; index < this.contenidopedido.length; index++) {
+     const element = this.contenidopedido[index];
+     console.log(element.no_pedido);
+     if (element.no_pedido == this.data.no_pedido) {
+       for (let I2 = 0; I2 < this.productos.length; I2++) {
+         const element2 = this.productos[I2];
+         if (element2.codigo_producto == element.producto) {
+           this.total += (element2.precio * element.cantidad);
+
+         }
+       }
+     }
+   }
+   const now = new Date();
+   console.log(now);
+     const nuevaVenta = {
+       "codigo_venta": 0,
+       "no_pedido": Number(this.data.no_pedido),
+       "cantidad": null,
+       "fecha": now,
+       "monto": this.total
+     }
+
+     console.log(nuevaVenta);
+     let aa = this.pedidos.registrarVenta(nuevaVenta).toPromise();
+     console.log(aa);
+}
+ 
 
   cerrardetalles(){
     const dialogRef = this.dialog.closeAll();
+    
   }
 }

@@ -23,19 +23,7 @@
 <main>
 
   
-    <!-- inicio muestra productos -->
-    <div *ngFor="let inventario of medicina"  class="producto">
-        <div *ngIf="inventario.estado_producto == 1" class="producto__imagen">
-                <picture>
-                    <img loading="lazy" width="200" height="200" src="assets/img/{{inventario.imagen}}" alt="img">
-                </picture>
-           
-            <h3 class="no-margin">{{inventario.nombre_producto}}</h3>
-            <p>{{inventario.descripcion_producto}}</p>
-            <p class="no-margin">Precio: Q. {{inventario.precio}}</p>
-        </div>
-    </div>
-    <!-- fin muestra productos -->
+ 
 
 </main>
 <footer class="footer section">

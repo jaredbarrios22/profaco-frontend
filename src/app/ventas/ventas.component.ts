@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { calls } from 'src/app/calls/calls.service';
 import { Router } from '@angular/router';
+import { DetallesPedidoComponent } from '../detalles-pedido/detalles-pedido.component';
+import { MatDialog } from '@angular/material/dialog';
+import { DetallesVentaComponent } from '../detalles-venta/detalles-venta.component';
 
 interface venta{
   codigo_venta: Number;
@@ -18,8 +21,10 @@ interface venta{
   styleUrls: ['./ventas.component.css']
 })
 export class VentasComponent implements OnInit {
+  
 
-  constructor(private calls: calls, private router:Router) { }
+  constructor(private calls: calls, private router:Router,
+    private dialog: MatDialog) { }
   ventas = null;
   ngOnInit(): void {
     this.reporte();
@@ -34,7 +39,22 @@ export class VentasComponent implements OnInit {
     this.router.navigate(['overview'])
   }
 
-  consultar(numero: any){
-    console.log(numero);
+ 
+ 
+ 
+  async consultar(numero: number){
+    console.log('orueboa', numero);
+    this.calls.consultaPedido(numero).subscribe((pedido) => {
+      console.log('Respuesta',pedido); 
+      const dialogRef = this.dialog.open(DetallesVentaComponent, {
+        width: '60%',
+        height: 'auto',
+        data: pedido,
+      })
+      console.log(pedido);
+
+
+});
+    
   }
 }

@@ -1,4 +1,5 @@
 <header class="banner bannner-principal">
+   
     <div class="barra">
         <a href="index.html" class="logo">
             <h1 class="logo-texto centrar-texto texto-normal no-margin">Profaco<span class="texto-bold">GT</span></h1>
@@ -6,7 +7,7 @@
         <nav>
             <ul class="menu" style="font-size: 22px;">
                 <li><a class="link" (click)="regresar()"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon></a></li>
-                <li><a class="link" (click)="contacto()">Contacto</a></li>
+                
                 
             </ul>
         </nav>
@@ -24,17 +25,7 @@
 
   
     <!-- inicio muestra productos -->
-    <div *ngFor="let inventario of medicina"  class="producto">
-        <div *ngIf="inventario.estado_producto == 1" class="producto__imagen">
-                <picture>
-                    <img loading="lazy" width="200" height="200" src="assets/img/{{inventario.imagen}}" alt="img">
-                </picture>
-           
-            <h3 class="no-margin">{{inventario.nombre_producto}}</h3>
-            <p>{{inventario.descripcion_producto}}</p>
-            <p class="no-margin">Precio: Q. {{inventario.precio}}</p>
-        </div>
-    </div>
+ 
     <!-- fin muestra productos -->
 
 </main>
@@ -46,6 +37,7 @@
             </a>
             <nav>
                 <ul class="menu">
+                    <li><a class="link" (click)="informacion()">¿Quiénes somos?</a></li>
                     <li><a class="link" (click)="regresar()"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon></a></li>
                    
                 </ul>

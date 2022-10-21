@@ -128,7 +128,7 @@
                             <td>{{venta.no_pedido}}</td>
                             <td>{{venta.fecha  | date: 'dd/MM/YYYY'}}</td>
                             <td>Q. {{venta.monto}}</td>
-                            <td><input type="submit" value="consultar" (click)="consultar(venta)"></td>
+                            <td><input type="submit" value="consultar" (click)="consultar(venta.no_pedido)"></td>
                         </tr>
                     </tbody>
                 </table>

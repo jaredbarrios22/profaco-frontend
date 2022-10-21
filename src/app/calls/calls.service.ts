@@ -32,16 +32,22 @@ export class calls{
     public estadoProducto(): Observable<any>{
         return this.http.get<any>('http://localhost:8080/estado');
     }
+    public usuarios(): Observable<any>{
+        return this.http.get<any>('http://localhost:8080/usuario/ingreso');
+    }
+
+
     public registrarPedido(body: any){
         return this.http.post<any>('http://localhost:8080/pedidos/registrar',body);
     }
-    
     public registrarProducto(body: any){
         return this.http.post<any>('http://localhost:8080/productos/ingresar',body);
     }
-
-    public usuarios(): Observable<any>{
-        return this.http.get<any>('http://localhost:8080/usuario/ingreso');
+    public registrarVenta(body: any){
+        return this.http.post<any>('http://localhost:8080/ventas/registrar',body);
+    }
+    public consultaPedido(data: number): Observable<any>{
+        return this.http.get<any>(`http://localhost:8080/pedidos/consulta/${data}`);
     }
     }
 

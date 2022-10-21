@@ -17,8 +17,12 @@ export class PrincipalComponent implements OnInit {
    
   }
 
-
-
+  contacto(){
+    this.router.navigate(['contacto'])  
+  }
+  informacion(){
+    this.router.navigate(['informacion'])  
+  }
   login(){
     this.router.navigate(['inicio-sesion'])  
   };

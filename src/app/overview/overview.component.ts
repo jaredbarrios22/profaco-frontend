@@ -61,6 +61,10 @@ export class OverviewComponent implements OnInit {
   }
 
  
+  empleados(){
+    this.router.navigate(['empleados'])
+  }
+
   abrirDetalles(data:any){
     const dialogRef = this.dialog.open(DetallesPedidoComponent, {
       width: 'auto',

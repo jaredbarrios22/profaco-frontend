@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { FormControl, FormGroup } from '@angular/forms';
 import { EditarProductoComponent } from '../editar-producto/editar-producto.component';
 import { MatDialog } from '@angular/material/dialog';
+import swal from 'sweetalert2';
 
 interface producto{
   codigo_producto: Number;
@@ -64,6 +65,40 @@ export class ProductosComponent implements OnInit {
       data:numero
     });
 
+  }
+
+  ingresarprod(){
+
+    const nuevoproducto = {
+        "codigo_producto": 0,
+        "nombre_producto": this.ingresarForm.get('producto')?.value,
+        "descripcion_producto": this.ingresarForm.get('descripcion')?.value,
+        "cantidad": Number(this.ingresarForm.get('cantidad')?.value),
+        "estado_producto":Number(this.ingresarForm.get('estado')?.value),
+        "precio": Number(this.ingresarForm.get('precio')?.value),
+        "imagen": null
+    } 
+    console.log(nuevoproducto);
+    swal.fire({
+      title: '¿Desea agregar el nuevo producto?',
+      showDenyButton: true,
+      confirmButtonText: 'Si',
+      denyButtonText: 'No',
+      customClass: {
+        actions: 'my-actions',
+        confirmButton: 'order-1',
+        denyButton: 'order-2',
+      }
+    }).then((result) => {
+      if (result.isConfirmed) {
+        //confirmar cambios
+        let a = this.calls.registrarProducto(nuevoproducto).toPromise();
+        console.log(a);
+        swal.fire('Cambios confirmados', '', 'success')
+      }
+    })
+
+   this.ngOnInit();
   }
 
   administracion(){

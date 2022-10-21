@@ -66,9 +66,9 @@ export class EditarProductoComponent implements OnInit {
       "codigo_producto": this.data.codigo_producto,
       "nombre_producto": this.editarForm.get('producto')?.value,
       "descripcion_producto": this.editarForm.get('descripcion')?.value,
-      "cantidad": this.editarForm.get('cantidad')?.value,
-      "estado_producto":this.editarForm.get('estadoP')?.value,
-      "precio": this.editarForm.get('precio')?.value,
+      "cantidad": Number(this.editarForm.get('cantidad')?.value),
+      "estado_producto":Number(this.editarForm.get('estadoP')?.value),
+      "precio": Number(this.editarForm.get('precio')?.value),
       "imagen": this.data.imagen
   }
 

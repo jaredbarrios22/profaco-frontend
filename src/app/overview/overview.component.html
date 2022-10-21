@@ -8,7 +8,7 @@
 	<body>
 		<div id="header">
 			<ul class="menu">
-				<li><input type="button" class="btn btn-info" value="Empleados">
+				<li><input type="button" class="btn btn-info" value="Empleados" (click)="empleados()">
 				</li>
 				<li><input type="submit" class="btn btn-danger" value="Salir" (click)="regresar()">
 				</li>
@@ -17,6 +17,9 @@
 		<div id="header">
 			<ul class="submenu">
 				<li><input type="submit" value="Productos" class="btn btn-secondary" style="font-size: 20px;" (click)="productosModificar()">
+				</li>
+				<li>
+					<div style="padding: 10px;"></div>
 				</li>
 				<li><input type="submit" value="ventas" class="btn btn-secondary" style="font-size: 20px;"(click)="ventasReporte()">
 				</li>
@@ -34,7 +37,6 @@
 				<td>Email</td>
 				<td>Direccion</td>
 				<td>Departamento</td>
-				<td>Municipio</td>
 				<td>Zona</td>
 			</tr>
 			<tbody *ngFor="let pedido of pedidos">
@@ -46,10 +48,9 @@
 								<td>{{pedido.telefono}}</td>
 								<td>{{pedido.email}}</td>
 								<td>{{pedido.direccion}}</td>
-								<td>{{pedido.departamento}}</td>
 								<td>
 									<div *ngFor="let mun of municipioslista"><div *ngIf="pedido.municipio == mun.codigo_municipio">
-										{{mun.nombre_municipio}}
+										{{mun.departamento}}, {{mun.nombre_municipio}}
 
 									</div></div>
 									</td>
