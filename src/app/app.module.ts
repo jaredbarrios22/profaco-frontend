@@ -27,6 +27,9 @@ import { RegistrarempleadoComponent } from './registrarempleado/registraremplead
 import { ContactoComponent } from './contacto/contacto.component';
 import { InformacionComponent } from './informacion/informacion.component';
 import {MatIconModule} from '@angular/material/icon';
+import { TarjetaproductoComponent } from './tarjetaproducto/tarjetaproducto.component';
+import { CarritoComponent } from './carrito/carrito.component';
+
 
   const routes: Routes = [
     {   
@@ -61,7 +64,14 @@ import {MatIconModule} from '@angular/material/icon';
     },
     {
       path: 'informacion', component: InformacionComponent
+    },
+    {
+      path: 'tarjeta', component: TarjetaproductoComponent
+    },
+    {
+      path: 'carrito', component: CarritoComponent
     }
+    
   ];
 @NgModule({
   declarations: [
@@ -78,6 +88,8 @@ import {MatIconModule} from '@angular/material/icon';
     RegistrarempleadoComponent,
     ContactoComponent,
     InformacionComponent,
+    TarjetaproductoComponent,
+    CarritoComponent,
   ],
   imports: [
     BrowserModule,

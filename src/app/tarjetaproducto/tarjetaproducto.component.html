@@ -1,0 +1,21 @@
+<div class="general">
+    <div class="child">
+        <form [formGroup]="carritoForm"> <table>
+        <tr>
+           <td colspan="2"><h1>{{data.nombre_producto}} </h1></td>
+           <td>Descripcion</td>
+        </tr>
+        <tr> 
+            <td colspan="2" rowspan="2"><img width="200px" height="200px" src="assets/img/{{data.imagen}}" alt="img"></td>
+            <td><h2> {{data.descripcion_producto}} <br> En inventario: {{data.cantidad}} </h2></td>
+            
+        </tr>
+          <tr>
+            <td><input matInput type="number" class="contador" formControlName="cantidad" min="0" max="100" placeholder="Cantidad"><br><br>
+                <button type="submit"  class="btn btn-success" (click)="ordenar(data)"><mat-icon>add_shopping_cart</mat-icon></button>
+            </td>
+            
+        </tr>
+    </table></form>
+</div>
+</div>

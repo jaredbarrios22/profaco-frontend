@@ -6,7 +6,7 @@ import { Observable } from 'rxjs'
     providedIn: 'root'
 })
 export class calls{
-
+    arreglo: any =[];
     constructor(private http: HttpClient){
 
     }

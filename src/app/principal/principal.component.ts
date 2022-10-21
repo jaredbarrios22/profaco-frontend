@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { calls } from 'src/app/calls/calls.service';
+
 
 
 
@@ -11,7 +13,11 @@ import { calls } from 'src/app/calls/calls.service';
   styleUrls: ['./principal.component.css']
 })
 export class PrincipalComponent implements OnInit {
-  constructor(private calls: calls, private router:Router) { }
+ 
+  constructor(private calls: calls, private router:Router) {
+
+   
+   }
 
   ngOnInit(): void {
    
@@ -29,4 +35,6 @@ export class PrincipalComponent implements OnInit {
   catalogo(){
     this.router.navigate(['catalogo'])  
   }
-}
+
+    
+  }

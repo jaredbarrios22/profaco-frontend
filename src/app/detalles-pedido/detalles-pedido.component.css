@@ -10,6 +10,9 @@
      background: #ffffff;  
      border-radius: 5%;
 }
+.child{
+    content: justify;
+}
 
 mat-label{
     color: black;

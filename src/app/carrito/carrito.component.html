@@ -1,0 +1,49 @@
+<html>
+<head>
+	
+	
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
+</head>
+<body>
+   <div class="CartContainer">
+   	   <div class="Header"><input type="submit" value="Regresar"(click)="regresar()">
+		<h3 class="Heading">Carrito</h3>
+   	   	<h5 class="Action" (click)="vaciarcarrito()">Remover todos</h5>
+   	   </div>
+
+   	   <div class="Cart-Items" *ngFor="let pedido of contenidos">
+   	   	  <div class="image-box">
+   	   	  	<img src="assets/img/{{pedido.imagen}}" style=" height:120px;" />
+   	   	  </div>
+   	   	  <div class="about">
+   	   	  	<h1 class="title">{{pedido.nombre_producto}}</h1>
+   	   	  	<h3 class="subtitle"></h3>
+   	   	  	<!-- <img src="images/veg.png" style=" height:30px;" /> -->
+   	   	  </div>
+   	   	  <div class="counter">
+   	   	  	
+   	   	  	<div class="count">Cantidad: {{pedido.cantidad}}</div>
+   	   	  	
+   	   	  </div>
+   	   	  <div class="prices">
+			<div class="amount">Q. {{pedido.precio}} c/u</div>
+   	   	  	<div class="amount">Q. {{pedido.precio * pedido.cantidad}}</div>
+   	   	  	
+   	   	  	<div class="remove" (click)="removeritem(pedido)"><u>Remover</u></div>
+   	   	  </div>
+   	   </div>
+
+
+   	 <hr> 
+   	 <div class="checkout">
+   	 <div class="total">
+   	 	<div>
+   	 		<div class="Subtotal">Sub-Total</div><br>
+   	 		<div class="items">Productos: {{contenidos.length}}</div>
+   	 	</div>
+   	 	<div class="total-amount">{{total}}</div>
+   	 </div>
+   	 <button class="button" (click)="terminarPedido()">Ordenar</button></div>
+   </div>
+</body>
+</html>
