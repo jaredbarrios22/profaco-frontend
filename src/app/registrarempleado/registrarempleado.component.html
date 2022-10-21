@@ -1,0 +1,73 @@
+<form [formGroup]="ingresarForm">             
+    <div class="mb-3">
+        <mat-form-field appearance="fill">
+            <mat-label>Usuario</mat-label>
+            <input matInput formControlName="usuarioE" required="true">
+          </mat-form-field>
+    </div>
+    <div class="mb-3">
+        <mat-form-field appearance="fill">
+            <mat-label>Contraseña</mat-label>
+            <input type="password" matInput formControlName="contrasenaE" required="true">
+          </mat-form-field>
+    </div>
+    
+    <div class="mb-3">
+      <mat-form-field appearance="fill">
+          <mat-label>Confirmar contraseña</mat-label>
+          <input type="password" matInput formControlName="contrasena2E" required="true">
+        </mat-form-field>
+  </div>
+
+  <div class="mb-3">
+    <mat-form-field appearance="fill">
+        <mat-label>Nombres</mat-label>
+        <input matInput formControlName="nombre" required="true">
+      </mat-form-field>
+</div>
+
+<div class="mb-3">
+  <mat-form-field appearance="fill">
+      <mat-label>Apellidos</mat-label>
+      <input matInput formControlName="apellido" required="true">
+    </mat-form-field>
+</div>
+
+<div class="mb-3">
+  <mat-form-field appearance="fill">
+      <mat-label>Direccion</mat-label>
+      <input matInput formControlName="direccionE" required="true">
+    </mat-form-field>
+</div>
+
+<div class="mb-3">
+  <mat-form-field appearance="fill">
+      <mat-label>to-do</mat-label>
+      <input matInput formControlName="municipioE" required="true">
+    </mat-form-field>
+</div>
+
+<div class="mb-3">
+  <mat-form-field appearance="fill">
+      <mat-label>Zona</mat-label>
+      <input type="" matInput formControlName="zonaE" required="true">
+    </mat-form-field>
+</div>
+
+<div class="mb-3">
+  <mat-form-field appearance="fill">
+      <mat-label>Correo</mat-label>
+      <input type="email" matInput formControlName="emailE" required="true">
+    </mat-form-field>
+</div>
+
+<div class="mb-3">
+  <mat-form-field appearance="fill">
+      <mat-label>Telefono</mat-label>
+      <input matInput formControlName="telefonoE" required="true">
+    </mat-form-field>
+</div>
+
+    
+        
+    </form>
