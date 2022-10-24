@@ -1,0 +1,70 @@
+<html>
+<head>
+	
+	
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
+</head>
+<body>
+   <div class="CartContainer">
+   	   <div class="Header">
+		<h3 class="Heading">Formulario de pedido</h3>
+   	   	<h5 class="Action"></h5>
+   	   </div>
+          <form [formGroup]="pedidoForm">
+   	   <div class="Cart-Items">
+        <mat-form-field appearance="fill"><mat-label>Nombre</mat-label>
+   	    <input matInput type="text" formControlName="" placeholder="Nombre" required="true">
+    </mat-form-field>
+    <mat-form-field appearance="fill"><mat-label>Apellido</mat-label>
+        <input matInput type="text" formControlName="Apellido" placeholder="Apellido">
+    </mat-form-field>   
+      
+   	  
+   	   	
+   	   </div>
+
+        <div class="Cart-Items">
+            <mat-form-field appearance="fill"><mat-label>Telefono</mat-label>
+            <input matInput type="text" formControlName="Telefono" placeholder="Telefono"> 
+            </mat-form-field> 
+            <mat-form-field appearance="fill"><mat-label>Correo</mat-label>
+            <input matInput type="text" formControlName="Correo" placeholder="Correo electrónico">
+            </mat-form-field> 
+        </div>
+         
+
+        <div class="Cart-Items">
+            <mat-form-field appearance="fill"><mat-label>Direccion</mat-label>
+            <input matInput type="text" formControlName="Direccion" placeholder="Direccion">
+            </mat-form-field> 
+        </div>
+        <div class="Cart-Items">
+        <mat-form-field appearance="fill">
+            <mat-label>Departamento</mat-label>
+            <mat-select matNativeControl formControlName="Departamento">
+             <mat-option></mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Municipio</mat-label>
+            <mat-select matNativeControl formControlName="Municipio">
+             <mat-option></mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+    </form>
+   	 <hr> 
+   	 <div class="checkout">
+   	 <div class="total">
+   	 	<div>
+   	 		<div class="Subtotal"></div><br>
+   	 		<div class="items"></div>
+   	 	</div>
+   	 	<div class="total-amount"></div>
+   	 </div>
+        <button class="buttonred">Regresar al catálogo</button>
+   	 <button class="button">Confirmar pedido</button></div>
+   </div>
+</body>
+</html>

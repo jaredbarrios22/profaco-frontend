@@ -14,7 +14,8 @@ constructor(private router:Router){}
 
 
 ngOnInit(){
-  this.router.navigate(['principal']) 
+  this.router.navigate(['principal'])
+  //this.router.navigate(['pedidoform']) 
 }
 
 

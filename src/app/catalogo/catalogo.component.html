@@ -1,16 +1,17 @@
 <header class="banner bannner-principal">
     <div class="barra">
-        <a class="link" (click)="carrito()"><mat-icon>shopping_cart</mat-icon></a>
+        <a class="link" (click)="regresar()"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon></a>
         <a href="index.html" class="logo">
                <h1 class="logo-texto centrar-texto texto-normal no-margin">Profaco<span class="texto-bold">GT</span></h1>
         </a>
         <nav>
             <ul class="menu" style="font-size: 22px;">
-                <li><a class="link" (click)="regresar()"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon></a></li>
+                
                 <li><a class="link" (click)="contacto()">Contacto</a></li>
                 <li> <form [formGroup]="consultarForm"> 
                     <input  matInput type="text" placeholder="¡Consulta tu pedido!" formControlName="id_pedido"><input type="submit" value="Consultar" class="btn btn-primary" (click)="consultarPedido()">
-                  </form></li>
+                  </form></li><li style="width: 20px;"></li>
+                  <li><a class="link" (click)="carrito()"><mat-icon>shopping_cart</mat-icon></a></li>
             </ul>
         </nav>
        

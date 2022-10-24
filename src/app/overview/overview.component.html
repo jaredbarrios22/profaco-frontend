@@ -37,7 +37,7 @@
 				<td>Email</td>
 				<td>Direccion</td>
 				<td>Departamento</td>
-				<td>Zona</td>
+				<!-- <td>Zona</td> -->
 			</tr>
 			<tbody *ngFor="let pedido of pedidos">
 						<tr *ngIf="pedido.estado_pedido != 'terminado'">
@@ -54,7 +54,7 @@
 
 									</div></div>
 									</td>
-								<td>{{pedido.zona}}</td>
+								<!-- <td>{{pedido.zona}}</td> -->
 								<td><input type="submit" value="Consultar" (click)="abrirDetalles(pedido)"></td>
 						</tr>
 			</tbody>

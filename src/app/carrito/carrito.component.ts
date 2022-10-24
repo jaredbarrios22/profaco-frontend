@@ -75,7 +75,8 @@ export class CarritoComponent implements OnInit {
       }
     }).then((result) => {
       if (result.isConfirmed) {
-        console.log("continuar pedido")
+        console.log("continuar pedido");
+        this.router.navigate(['pedidoform'])   
         //continuar pedido
         
       }

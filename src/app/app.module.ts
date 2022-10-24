@@ -29,6 +29,7 @@ import { InformacionComponent } from './informacion/informacion.component';
 import {MatIconModule} from '@angular/material/icon';
 import { TarjetaproductoComponent } from './tarjetaproducto/tarjetaproducto.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import { PedidoformComponent } from './pedidoform/pedidoform.component';
 
 
   const routes: Routes = [
@@ -70,6 +71,9 @@ import { CarritoComponent } from './carrito/carrito.component';
     },
     {
       path: 'carrito', component: CarritoComponent
+    },
+    {
+      path: 'pedidoform', component: PedidoformComponent
     }
     
   ];
@@ -90,6 +94,7 @@ import { CarritoComponent } from './carrito/carrito.component';
     InformacionComponent,
     TarjetaproductoComponent,
     CarritoComponent,
+    PedidoformComponent,
   ],
   imports: [
     BrowserModule,
