@@ -13,7 +13,7 @@
           <form [formGroup]="pedidoForm">
    	   <div class="Cart-Items">
         <mat-form-field appearance="fill"><mat-label>Nombre</mat-label>
-   	    <input matInput type="text" formControlName="" placeholder="Nombre" required="true">
+   	    <input matInput type="text" formControlName="Nombre" placeholder="Nombre" required="true">
     </mat-form-field>
     <mat-form-field appearance="fill"><mat-label>Apellido</mat-label>
         <input matInput type="text" formControlName="Apellido" placeholder="Apellido">
@@ -64,7 +64,7 @@
    	 	<div class="total-amount"></div>
    	 </div>
         <button class="buttonred">Regresar al catálogo</button>
-   	 <button class="button">Confirmar pedido</button></div>
+   	 <button class="button" (click)="registrarpedido()">Confirmar pedido</button></div>
    </div>
 </body>
 </html>
